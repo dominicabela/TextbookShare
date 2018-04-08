@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 
 import * as routes from '../constants/routes';
+import withAuthorization from './withAuthorization';
 
 const SearchPage = ({ history }) =>
   <div className='search-form'>
@@ -73,7 +74,9 @@ class SearchForm extends Component {
   }
 }
 
-export default withRouter(SearchPage);
+const authCondition = (authUser) => !!authUser;
+
+export default withAuthorization(authCondition)(SearchPage);
 
 export {
   SearchForm
