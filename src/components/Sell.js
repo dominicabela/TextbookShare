@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 
+import { auth, db } from '../firebase';
 import * as routes from '../constants/routes';
 import withAuthorization from './withAuthorization';
 
@@ -35,6 +36,14 @@ class SellForm extends Component {
     const {
       history,
     } = this.props;
+
+    db.doCreateBook(auth.currentUser, ISBN, price)
+      .then(() => {
+        this.setState(() => ({ ...INITIAL_STATE }));
+      })
+      .catch(error => {
+        this.setState(byPropKey('error', error));
+      });
 
     event.preventDefault();
   }
