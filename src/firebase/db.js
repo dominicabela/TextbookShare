@@ -8,14 +8,16 @@ export const doCreateUser = (id, username, email) =>
     email,
   });
 
-export const doCreateBook = (id, ISBN, price) =>
+export const doCreateBook = (ISBN, price) =>
   db.ref(`books/${ISBN}`).set({
-    id,
     price,
   });
 
 export const onceGetUsers = () =>
   db.ref('users').once('value');
+
+export const onceGetBooks = () =>
+  db.ref('books').once('value');
 
 // Other Entity APIs ...
 // Books API should go here

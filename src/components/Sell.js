@@ -7,7 +7,6 @@ import withAuthorization from './withAuthorization';
 
 const SellPage = ({ history }) =>
   <div className='search-form'>
-    <h1>Sell</h1>
     <SellForm history={history}/>
   </div>
 
@@ -37,7 +36,7 @@ class SellForm extends Component {
       history,
     } = this.props;
 
-    db.doCreateBook(auth.currentUser, ISBN, price)
+    db.doCreateBook(ISBN, price)
       .then(() => {
         this.setState(() => ({ ...INITIAL_STATE }));
       })

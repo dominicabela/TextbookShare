@@ -6,36 +6,44 @@ class HomePage extends Component {
     super(props);
 
     this.state = {
-      users: null,
+      books: null,
     };
   }
 
   componentDidMount() {
-    db.onceGetUsers().then(snapshot =>
-      this.setState(() => ({ users: snapshot.val() }))
+    db.onceGetBooks().then(snapshot =>
+      this.setState(() => ({ books: snapshot.val() }))
     );
   }
 
   render() {
 
-    const { users } = this.state;
+    const { books } = this.state;
 
     return (
       <div>
         <h1 className='home'>Home Page</h1>
-        { !!users && <UserList users={users} /> }
+        { !!books && <UserList books={books} /> }
       </div>
     );
   }
 }
 
-const UserList = ({ users }) =>
+const UserList = ({ books }) =>
   <div>
-    <h2>Users:</h2>
-
-    {Object.keys(users).map(key =>
-      <div key={key}>{users[key].username}</div>
-    )}
+    <h2>Available Books:</h2>
+    <table>
+      <tr>
+        <th>ISBN</th>
+        <th>Price</th>
+      </tr>
+      {Object.keys(books).map(key =>
+        <tr>
+          <td>{key}</td>
+          <td>{books[key].price}</td>
+        </tr>
+      )}
+    </table>
   </div>
 
 export default HomePage;

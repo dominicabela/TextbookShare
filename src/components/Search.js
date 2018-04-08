@@ -3,12 +3,7 @@ import { Link, withRouter } from 'react-router-dom';
 
 import * as routes from '../constants/routes';
 import withAuthorization from './withAuthorization';
-
-const SearchPage = ({ history }) =>
-  <div className='search-form'>
-    <h1>Search</h1>
-    <SearchForm history={history}/>
-  </div>
+import { db } from '../firebase';
 
 const INITIAL_STATE = {
   ISBN: '',
@@ -73,6 +68,51 @@ class SearchForm extends Component {
     );
   }
 }
+
+class SearchPage extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      books: null,
+    };
+  }
+
+  componentDidMount() {
+    db.onceGetBooks().then(snapshot =>
+      this.setState(() => ({ books: snapshot.val() }))
+    );
+  }
+
+  render() {
+
+    const { books } = this.state;
+
+    return (
+      <div className='search-form'>
+        <SearchForm history={this.props}/>
+        { !!books && <UserList books={books} /> }
+      </div>
+    );
+  }
+}
+
+const UserList = ({ books }) =>
+  <div className='booklist'>
+    <h2>Available Books:</h2>
+    <table>
+      <tr>
+        <th>ISBN</th>
+        <th>Price</th>
+      </tr>
+      {Object.keys(books).map(key =>
+        <tr>
+          <td>{key}</td>
+          <td>{books[key].price}</td>
+        </tr>
+      )}
+    </table>
+  </div>
 
 const authCondition = (authUser) => !!authUser;
 
