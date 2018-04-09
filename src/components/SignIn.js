@@ -4,7 +4,7 @@ import { SignUpLink } from './SignUp';
 import { PasswordForgetLink } from './PasswordForget';
 import { auth } from '../firebase';
 import * as routes from '../constants/routes';
-import '/Users/BirBird/Documents/Documents - Brittany’s MacBook Pro/TextbookShare/src/res/css/index.css';
+import '../res/css/index.css';
 
 const SignInPage = ({ history }) =>
   <div className='input-form'>
