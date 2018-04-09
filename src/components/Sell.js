@@ -77,7 +77,7 @@ class SellForm extends Component {
         <input
           value={number}
           onChange={event => this.setState(byPropKey('number', event.target.value))}
-          type="tel"
+          type="text"
           placeholder="Contact Number"
         />
           <button disabled={isInvalid} type="submit" className="enter" onClick={()=>{ alert('Book Submission Complete!'); }}>
