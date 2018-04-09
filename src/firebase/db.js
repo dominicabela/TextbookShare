@@ -8,9 +8,9 @@ export const doCreateUser = (id, username, email) =>
     email,
   });
 
-export const doCreateBook = (ISBN, price) =>
+export const doCreateBook = (ISBN, price, number) =>
   db.ref(`books/${ISBN}`).set({
-    price,
+    price, number
   });
 
 export const onceGetUsers = () =>

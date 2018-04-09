@@ -5,3 +5,4 @@ export const ACCOUNT = '/account';
 export const PASSWORD_FORGET = '/pw-forget';
 export const SEARCH = '/search';
 export const SELL = '/sell';
+export const ABOUT = '/sell';

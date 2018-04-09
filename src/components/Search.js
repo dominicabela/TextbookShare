@@ -46,7 +46,7 @@ class SearchForm extends Component {
       title === '';
 
     return (
-      <form onSubmit={this.onSubmit}>
+      <form onSubmit={this.onSubmit} className="searchForm">
         <input
           value={ISBN}
           onChange={event => this.setState(byPropKey('ISBN', event.target.value))}
@@ -59,7 +59,8 @@ class SearchForm extends Component {
           type="text"
           placeholder="Title"
         />
-        <button disabled={isInvalid} type="submit">
+
+        <button disabled={isInvalid} type="submit" className="enter">
           Search
         </button>
 
@@ -91,6 +92,7 @@ class SearchPage extends Component {
     return (
       <div className='search-form'>
         <SearchForm history={this.props}/>
+        <br/><br/>
         { !!books && <UserList books={books} /> }
       </div>
     );
@@ -104,11 +106,13 @@ const UserList = ({ books }) =>
       <tr>
         <th>ISBN</th>
         <th>Price</th>
+        <th>Contact</th>
       </tr>
       {Object.keys(books).map(key =>
         <tr>
           <td>{key}</td>
           <td>{books[key].price}</td>
+          <td>{books[key].number}</td>
         </tr>
       )}
     </table>

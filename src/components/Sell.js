@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router-dom';
-
+import Popup from 'react-popup';
 import { auth, db } from '../firebase';
 import * as routes from '../constants/routes';
 import withAuthorization from './withAuthorization';
@@ -30,13 +30,14 @@ class SellForm extends Component {
     const {
       ISBN,
       price,
+      number,
     } = this.state;
 
     const {
       history,
     } = this.props;
 
-    db.doCreateBook(ISBN, price)
+    db.doCreateBook(ISBN, price, number)
       .then(() => {
         this.setState(() => ({ ...INITIAL_STATE }));
       })
@@ -51,15 +52,16 @@ class SellForm extends Component {
     const {
       ISBN,
       price,
+      number,
       error,
     } = this.state;
 
     const isInvalid =
       ISBN === '' ||
-      price === '';
+      price === '' || number === '';
 
     return (
-      <form onSubmit={this.onSubmit}>
+      <form onSubmit={this.onSubmit} className="sellForm">
         <input
           value={ISBN}
           onChange={event => this.setState(byPropKey('ISBN', event.target.value))}
@@ -69,15 +71,22 @@ class SellForm extends Component {
         <input
           value={price}
           onChange={event => this.setState(byPropKey('price', event.target.value))}
-          type="text"
+          type="number"
           placeholder="Price"
         />
-        <button disabled={isInvalid} type="submit">
+        <input
+          value={number}
+          onChange={event => this.setState(byPropKey('number', event.target.value))}
+          type="tel"
+          placeholder="Contact Number"
+        />
+          <button disabled={isInvalid} type="submit" className="enter" onClick={()=>{ alert('Book Submission Complete!'); }}>
           Sell
-        </button>
+          </button>
 
         { error && <p className='error-message'>{error.message}</p> }
       </form>
+
     );
   }
 }

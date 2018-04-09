@@ -55,7 +55,7 @@ class PasswordForgetForm extends Component {
           type="text"
           placeholder="Email Address"
         />
-        <button disabled={isInvalid} type="submit">
+        <button className="enter" disabled={isInvalid} type="submit">
           Reset My Password
         </button>
 

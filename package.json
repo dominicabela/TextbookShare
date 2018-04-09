@@ -2,11 +2,19 @@
   "name": "textbook_share",
   "version": "0.1.0",
   "private": true,
+  "rnpm": {
+    "assets": [
+      "./src/res/fonts"
+    ]
+  },
   "dependencies": {
     "firebase": "^4.12.1",
     "react": "^16.3.1",
+    "react-alert": "^4.0.2",
+    "react-alert-template-basic": "^1.0.0",
     "react-dom": "^16.3.1",
     "react-icons": "^2.2.7",
+    "react-popup": "^0.9.2",
     "react-responsive-navbar": "^1.0.11",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.1.4"
@@ -17,5 +25,17 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "deploy": "firebase deploy"
-  }
+  },
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dominicabela/TextbookShare.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dominicabela/TextbookShare/issues"
+  },
+  "homepage": "https://github.com/dominicabela/TextbookShare#readme",
+  "description": ""
 }

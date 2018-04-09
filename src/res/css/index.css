@@ -1,12 +1,25 @@
 html {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
-  background-image: url('./res/images/book-books-bookshelf-159621.jpg');
+  font-family: 'Montserrat', sans-serif;
+  background-image: url('https://www.walldevil.com/wallpapers/a13/background-ground-images-back.jpg') !important;
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: #ccc;
   min-height: 100%;
+}
+
+h1.home{
+  font-family: 'Catamaran', sans-serif;
+  color: black;
+}
+
+.About{
+  background-color: #66a0ff;
+}
+
+a, .signOutButton {
+  color: #66a0ff;
+  font-family: 'Montserrat', sans-serif !important;
 }
 
 table {
@@ -14,36 +27,89 @@ table {
   width: 100%;
 }
 
+.enter{
+  color:white;
+  font-weight: bold;
+  background-color: #66a0ff !important;
+}
+
+.homeButton:hover{
+  background-color: #2b6fdb !important;
+}
+
+.homeButton{
+  font-family: 'Catamaran', sans-serif;
+  border-radius: 30px;
+  text-align: center;
+  margin-top: 8%;
+  background-color: #66a0ff !important;
+  color: white;
+  margin-right: 200px;
+  padding-bottom: 70px;
+  padding-top: 70px;
+  width: 500px;
+  text-decoration: none;
+}
+
+.homeButton a{
+  color: white;
+  font-family: 'Catamaran', sans-serif;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+th{
+  font-family: 'Catamaran', sans-serif;
+font-kerning: 20px; }
 td, th {
-  border: 1px solid #cccccc;
-  text-align: left;
+  border-radius: 70px;
+  text-align: center;
   padding: 8px;
 }
 
 tr:nth-child(even) {
-  background-color: #dddddd;
+  background-color: #66a0ff;
+  color: white;
 }
 
 tr:nth-child(odd) {
-  background-color: white;
+  background-color: #ededed;
 }
 
 .nav {
   overflow: hidden;
   list-style-type: none;
-  margin: 0;
-  padding: 0px;
+  background-color: #ffffff;
+  margin-right: 20px;
+}
+
+.navButton {
+    border: none;
+    border-radius: 0;
+    font-size: 17px;
+    font-family: palatino;
+    color: white;
+    background-color: inherit;
+}
+
+.menu{
+  float: right;
 }
 
 .logo {
   float: left;
   color: #fff;
   text-align: center;
-  margin: 0;
-  padding: 0;
-  padding-left: 10px;
   text-decoration: none;
-  font-size: 17px;
+}
+
+.siteLogo {
+  float: left;
+  color: #fff;
+  text-align: center;
+  margin-left: 40%;
+  padding: 0;
+  text-decoration: none;
 }
 
 .nav-tab {
@@ -99,7 +165,7 @@ tr:nth-child(odd) {
 }
 
 .nav-tab a {
-    color: white;
+  color: #66a0ff;
     font-family: garamond bold;
 }
 
@@ -119,18 +185,6 @@ tr:nth-child(odd) {
     background-color: inherit;
 }
 
-.navButton {
-    float: right;
-    margin: 0;
-    padding: 10px;
-    padding-right: 10px;
-    border: none;
-    border-radius: 0;
-    font-size: 17px;
-    font-family: palatino;
-    color: white;
-    background-color: inherit;
-}
 
 .navButton:hover {
     background-color: inherit;
@@ -145,7 +199,7 @@ tr:nth-child(odd) {
     border-radius: 0;
     font-size: 17px;
     font-family: garamond bold;
-    color: white;
+    color: #66a0ff;
     background-color: inherit;
 }
 
@@ -197,7 +251,7 @@ button:disabled:hover {
   border: 1px solid #ccc;
   border-radius: 10px;
   padding: 30px 30px;
-  box-shadow: 2px 2px 20px #333;
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.3);
   background-color: #fff;
 }
 
@@ -205,16 +259,22 @@ button:disabled:hover {
   width: 100%;
 }
 
+.sellForm, .searchForm{
+  align-content: center;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
 .search-form form input{
-  margin: 2%;
-  width: 29%;
-  float: left;
+  margin: 1%;
+  width: 44%;
+  display: inline-block;
 }
 
 .search-form form button{
-  margin: 2%;
-  width: 29%;
-  float: left;
+  margin: 1%;
+  width: 10%;
+  display: inline-block;
 }
 
 .account-form {

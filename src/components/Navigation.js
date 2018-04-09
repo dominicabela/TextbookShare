@@ -21,7 +21,7 @@ const Navigation = () =>
 
 const NavigationAuth = () =>
   <div className='nav'>
-    <div className='logo'><Link to={routes.HOME}><img src={require('../res/images/logo.png')} alt='Home'/></Link></div>
+    <div className='logo'><Link to={routes.HOME}><img src={require('../res/images/logo2.png')} style={{height:60}} alt='Home'/></Link></div>
     <ResponsiveMenu
           menuOpenButton={
             <div>
@@ -38,9 +38,9 @@ const NavigationAuth = () =>
           smallMenuClassName="nav-collapsed"
           menu={
             <ul>
-              <li className='nav-tab'><Link to={routes.ACCOUNT}>Account</Link></li>
-              <li className='nav-tab'><Link to={routes.SEARCH}>Search</Link></li>
-              <li className='nav-tab'><Link to={routes.SELL}>Sell</Link></li>
+              <li className='nav-tab'><Link to={routes.ACCOUNT}>ACCOUNT</Link></li>
+              <li className='nav-tab'><Link to={routes.SEARCH}>SEARCH</Link></li>
+              <li className='nav-tab'><Link to={routes.SELL}>SELL</Link></li>
               <li className='signOutButton'><SignOutButton /></li>
             </ul>
           }
@@ -49,8 +49,9 @@ const NavigationAuth = () =>
 
 const NavigationNonAuth = () =>
   <ul className='nav'>
-    <li className='logo'><Link to={routes.HOME}><img src={require('../res/images/logo.png')} alt='Home'/></Link></li>
-    <li className='navButton'><Link to={routes.SIGN_IN}>Sign In</Link></li>
+    <li className='logo'><Link to={routes.HOME}><img src={require('../res/images/logo3.png')} style={{height:40}} alt='Home'/></Link></li>
+    <li className='siteLogo'><Link to={routes.HOME}><img src={require('../res/images/logo4.png')} style={{height:50}} alt='Home'/></Link></li>
+    <li className='navButton'><Link to={routes.SIGN_IN}>SIGN IN</Link></li>
   </ul>
 
 
