@@ -1,10 +1,13 @@
 import React from 'react';
 import SignInForm from './SignIn';
-import { auth } from '../firebase';
 import * as routes from '../constants/routes';
 import { Link } from 'react-router-dom';
 import AuthUserContext from './AuthUserContext';
+<<<<<<< HEAD
 import '/Users/BirBird/Documents/Documents - Brittany’s MacBook Pro/TextbookShare/src/res/css/index.css';
+=======
+import '../res/css/index.css';
+>>>>>>> 520331bfd69caa1b3c0938cb00bf8e7ad743542b
 
 const HomePage = () =>
 <AuthUserContext.Consumer>

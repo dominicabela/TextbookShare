@@ -6,7 +6,6 @@ import SignOutButton from './SignOut';
 import * as routes from '../constants/routes';
 
 import ResponsiveMenu from 'react-responsive-navbar';
-import FaAlignJustify from 'react-icons/lib/fa/';
 
 var menuIcon = require('react-icons/lib/fa/bars');
 var closeIcon = require('react-icons/lib/fa/close');

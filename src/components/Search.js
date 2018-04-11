@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import { Link, withRouter } from 'react-router-dom';
 
-import * as routes from '../constants/routes';
 import withAuthorization from './withAuthorization';
 import { db } from '../firebase';
 
@@ -103,18 +101,20 @@ const UserList = ({ books }) =>
   <div className='booklist'>
     <h2>Available Books:</h2>
     <table>
+      <tbody>
       <tr>
         <th>ISBN</th>
         <th>Price</th>
         <th>Contact</th>
       </tr>
       {Object.keys(books).map(key =>
-        <tr>
+        <tr key={key}>
           <td>{key}</td>
           <td>{books[key].price}</td>
           <td>{books[key].number}</td>
         </tr>
       )}
+      </tbody>
     </table>
   </div>
 

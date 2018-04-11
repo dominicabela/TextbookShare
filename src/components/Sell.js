@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
-import { Link, withRouter } from 'react-router-dom';
-import Popup from 'react-popup';
-import { auth, db } from '../firebase';
-import * as routes from '../constants/routes';
+import { db } from '../firebase';
 import withAuthorization from './withAuthorization';
 
 const SellPage = ({ history }) =>
@@ -77,7 +74,7 @@ class SellForm extends Component {
         <input
           value={number}
           onChange={event => this.setState(byPropKey('number', event.target.value))}
-          type="tel"
+          type="text"
           placeholder="Contact Number"
         />
           <button disabled={isInvalid} type="submit" className="enter" onClick={()=>{ alert('Book Submission Complete!'); }}>
