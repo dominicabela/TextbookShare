@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom';
 import AuthUserContext from './AuthUserContext';
 import '/Users/BirBird/Documents/Documents - Brittany’s MacBook Pro/TextbookShare/src/res/css/index.css';
 
-
 const HomePage = () =>
 <AuthUserContext.Consumer>
   {authUser => authUser
@@ -22,7 +21,7 @@ const HomePage = () =>
       <img src={require('../res/images/logo2.png')} style={{height:500, float: 'left',marginRight:0, marginLeft:50}} alt='Home'/>
       <ul className="menu">
         <li className='homeButton'><Link to={routes.SELL}>CHECK MESSAGES</Link></li>
-        <li className='homeButton'><Link to={routes.SEARCH}>FIND BOOKS</Link></li>
+        <li className='homeButton'><Link to={'./ScanBarcode'}>SCAN BOOK</Link></li>
       </ul>
       </div>
 
