@@ -90,7 +90,11 @@ class SellForm extends Component {
           type="text"
           placeholder="Contact Number"
         />
+<<<<<<< HEAD
           <button disabled={isInvalid} type="submit" className="enter" onClick={()=>{ }}>
+=======
+          <button disabled={isInvalid} type="submit" onClick={()=>{ alert('Book Submission Complete!'); }}>
+>>>>>>> 93bc5aa2ec6b2c41df24734e8bc203a5b042f154
           Sell
           </button>
 

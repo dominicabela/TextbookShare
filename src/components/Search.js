@@ -60,7 +60,7 @@ class SearchForm extends Component {
           placeholder="Title"
         />
 
-        <button disabled={isInvalid} type="submit" className="enter">
+        <button disabled={isInvalid} type="submit">
           Search
         </button>
 
