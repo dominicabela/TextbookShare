@@ -4,8 +4,8 @@ import { auth } from '../firebase';
 import * as routes from '../constants/routes';
 import { Link } from 'react-router-dom';
 import AuthUserContext from './AuthUserContext';
-import '/Users/BirBird/Documents/Documents - Brittany’s MacBook Pro/TextbookShare/src/res/css/index.css';
-import '/Users/BirBird/Documents/Documents - Brittany’s MacBook Pro/TextbookShare/src/res/css/ScanBarcode.css';
+import '../res/css/index.css';
+import '../res/css/ScanBarcode.css';
 import Webcam from 'react-webcam';
 import ImageFilter from 'react-image-filter';
 
@@ -39,7 +39,7 @@ class WebcamCapture extends React.Component {
 
   render() {
     return (
-      
+
       <div className="camera">
         <Webcam
           audio={false}
