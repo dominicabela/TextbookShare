@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { db } from '../firebase';
 import withAuthorization from './withAuthorization';
+import Popup from 'react-popup';
+import books from 'google-books-search';
 
 const SellPage = ({ history }) =>
   <div className='search-form'>
@@ -33,6 +35,17 @@ class SellForm extends Component {
     const {
       history,
     } = this.props;
+
+    books.search(ISBN, function(error, results) {
+      if ( ! error ) {
+          console.log(results[0]);
+          alert('Book found:\n' +
+          '\nTitle: ' + results[0]['title'] +
+          '\nAuthor: ' + results[0]['authors'])
+      } else {
+          console.log(error);
+      }
+    });
 
     db.doCreateBook(ISBN, price, number)
       .then(() => {
@@ -77,7 +90,7 @@ class SellForm extends Component {
           type="text"
           placeholder="Contact Number"
         />
-          <button disabled={isInvalid} type="submit" className="enter" onClick={()=>{ alert('Book Submission Complete!'); }}>
+          <button disabled={isInvalid} type="submit" className="enter" onClick={()=>{ }}>
           Sell
           </button>
 

@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 
 import withAuthorization from './withAuthorization';
 import { db } from '../firebase';
+import Books from 'google-books-search';
+import Listing from './Listing.js';
 
 const INITIAL_STATE = {
   ISBN: '',
@@ -79,7 +81,9 @@ class SearchPage extends Component {
 
   componentDidMount() {
     db.onceGetBooks().then(snapshot =>
-      this.setState(() => ({ books: snapshot.val() }))
+      this.setState(() => ({
+        books: snapshot.val()
+      }))
     );
   }
 
@@ -92,9 +96,22 @@ class SearchPage extends Component {
         <SearchForm history={this.props}/>
         <br/><br/>
         { !!books && <UserList books={books} /> }
+        { !!books && <Listing data={books} /> }
       </div>
     );
   }
+}
+
+function getBookInfo(book) {
+  Books.search(book, function(error, results) {
+    if ( ! error ) {
+        console.log(results[0]['title']);
+        return(results[0]['title']);
+    } else {
+        console.log(error);
+        return('no title found');
+    }
+  })
 }
 
 const UserList = ({ books }) =>
