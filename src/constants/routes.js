@@ -5,4 +5,5 @@ export const ACCOUNT = '/account';
 export const PASSWORD_FORGET = '/pw-forget';
 export const SEARCH = '/search';
 export const SELL = '/sell';
-export const SCAN_BARCODE = '/scanbarcode';
+export const SCAN = '/scanbarcode';
+export const ABOUT = '/about';

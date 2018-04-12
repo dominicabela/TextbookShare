@@ -12,6 +12,8 @@ import HomePage from './Home';
 import AccountPage from './Account';
 import SellPage from './Sell';
 import SearchPage from './Search';
+import CameraScan from './ScanBarcode';
+import About from './About';
 
 import * as routes from '../constants/routes';
 
@@ -31,6 +33,9 @@ const App = () =>
       <Route exact path={routes.ACCOUNT} component={() => <AccountPage />} />
       <Route exact path={routes.SELL} component={() => <SellPage />} />
       <Route exact path={routes.SEARCH} component={() => <SearchPage />} />
+      <Route exact path={routes.SCAN} component={() => <CameraScan />} />
+      <Route exact path={routes.ABOUT} component={() => <About />} />
+
 
     </div>
   </Router>

@@ -1,0 +1,45 @@
+.camera, #scanner, #upload{
+  float: left;
+}
+
+.camera{
+  margin-right: 200px;
+  width: 100%;
+  text-align: center;
+}
+
+#scanner, #upload{
+  width: 50%;
+}
+#file {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+}
+
+#file:focus + label,
+#file + label:hover {
+    background-color: #1a71ff;
+}
+
+#file + label {
+  display: inline-block;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin: auto;
+  margin-top: 15px;
+  display: list-item;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: white;
+  font-weight: bold;
+  background-color: #66a0ff;
+  border: none;
+  font-family: Montserrat;
+}

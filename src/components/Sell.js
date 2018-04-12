@@ -77,7 +77,7 @@ class SellForm extends Component {
           type="text"
           placeholder="Contact Number"
         />
-          <button disabled={isInvalid} type="submit" className="enter" onClick={()=>{ alert('Book Submission Complete!'); }}>
+          <button disabled={isInvalid} type="submit" onClick={()=>{ alert('Book Submission Complete!'); }}>
           Sell
           </button>
 

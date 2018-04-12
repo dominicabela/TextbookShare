@@ -17,12 +17,12 @@ const HomePage = () =>
 
 
   const NavigationAuth = () =>
-    <div>
-      <img src={require('../res/images/logo2.png')} style={{height:500, float: 'left',marginRight:0, marginLeft:50}} alt='Home'/>
-      <ul className="menu">
-        <li className='homeButton'><Link to={routes.SELL}>CHECK MESSAGES</Link></li>
-        <li className='homeButton'><Link to={'./ScanBarcode'}>SCAN BOOK</Link></li>
-      </ul>
+    <div className="home">
+      <img className="homeLogo" src={require('../res/images/logo2.png')} alt='Home'/>
+      <div className="menu">
+        <Link to={routes.SELL}><button className='homeButton'>CHECK MESSAGES</button></Link>
+        <Link to={routes.SCAN}><button className='homeButton'>SCAN BOOK</button></Link>
+      </div>
       </div>
 
   const NavigationNonAuth = () =>
