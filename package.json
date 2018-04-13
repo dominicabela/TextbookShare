@@ -1,6 +1,6 @@
 {
   "name": "textbook_share",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "rnpm": {
     "assets": [
@@ -9,11 +9,13 @@
   },
   "dependencies": {
     "firebase": "^4.12.1",
+    "google-books-search": "^0.3.1",
     "react": "^16.3.1",
     "react-alert": "^4.0.2",
     "react-alert-template-basic": "^1.0.0",
     "react-dom": "^16.3.1",
     "react-icons": "^2.2.7",
+    "react-image-filter": "^0.1.2",
     "react-popup": "^0.9.2",
     "react-responsive-navbar": "^1.0.11",
     "react-router-dom": "^4.2.2",

@@ -3,7 +3,7 @@ import SignInForm from './SignIn';
 import * as routes from '../constants/routes';
 import { Link } from 'react-router-dom';
 import AuthUserContext from './AuthUserContext';
-import '/Users/BirBird/Documents/Documents - Brittany’s MacBook Pro/TextbookShare/src/res/css/index.css';
+import '../res/css/index.css';
 import '../res/css/index.css';
 
 const HomePage = () =>
