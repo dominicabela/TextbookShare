@@ -40,6 +40,7 @@ const NavigationAuth = () =>
               <li className='nav-tab'><Link to={routes.ACCOUNT}>ACCOUNT</Link></li>
               <li className='nav-tab'><Link to={routes.SEARCH}>SEARCH</Link></li>
               <li className='nav-tab'><Link to={routes.SELL}>SELL</Link></li>
+              <li className='nav-tab'><Link to={routes.SCAN}>SCAN BARCODE</Link></li>
               <li className='signOutButton'><SignOutButton /></li>
             </ul>
           }

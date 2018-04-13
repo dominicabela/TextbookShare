@@ -1,16 +1,21 @@
-.camera, #scanner, #upload{
-  float: left;
-}
-
 .camera{
-  margin-right: 200px;
-  width: 100%;
-  text-align: center;
+  width: 80%;
+text-align: center;
+margin-right: 10%;
+margin-left: 10%;
+margin-top: 2%;
+margin-bottom: 2%;
 }
 
-#scanner, #upload{
-  width: 50%;
+#upload{
+  width: 100%;
 }
+
+h2 {
+font-size: 50px;
+color: #66a0ff;
+}
+
 #file {
 	width: 0.1px;
 	height: 0.1px;
@@ -19,22 +24,20 @@
 }
 
 #file:focus + label,
-#file + label:hover {
+#file + label:hover, #capture:hover {
     background-color: #1a71ff;
 }
 
-#file + label {
-  display: inline-block;
+#file + label, #capture {
   cursor: pointer;
-  width: 100%;
+  width: 65%;
   text-align: center;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   padding-right: 20px;
   padding-left: 20px;
   margin: auto;
-  margin-top: 15px;
-  display: list-item;
+  display: list-item !important;
   border-radius: 4px;
   box-sizing: border-box;
   color: white;
@@ -42,4 +45,34 @@
   background-color: #66a0ff;
   border: none;
   font-family: Montserrat;
+  list-style: none;
+  font-size: 40%;
+
+}
+
+.scanPage{
+  text-align: center;
+  align-content: center;
+}
+
+#or{
+  margin:0;
+  margin-top: 5px;
+  font-size:30%;
+}
+
+
+.scanBar{
+  border-radius: 90px;
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.3);
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
+  background-color: rgba(255, 255, 255, 0.3);
+  float: left;
+}
+
+.scanBtns, .webcam{
+  width: 100%;
+  margin: 0;
 }
