@@ -54,7 +54,7 @@ h2{
 a, .signOutButton {
   color: #66a0ff !important;
   font-family: 'Montserrat', sans-serif !important;
-  background: none;
+  background: none !important;
 }
 
 a:hover{
